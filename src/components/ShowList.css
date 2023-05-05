@@ -1,0 +1,84 @@
+.card-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.card {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-content {
+  padding: 40px 10px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.card-description {
+  max-height: 18rem; /* Change this value as per your need */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 7; /* Change this value as per your need */
+  -webkit-box-orient: vertical;
+  position: relative;
+  /* z-index: 1; */
+  margin-bottom: 20px; /* Add some bottom margin */
+}
+
+.card-link {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #2196f3;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0 0 5px 5px;
+}
+
+.card-link:hover {
+  background-color: #0d47a1;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .card-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-columns {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-link {
+    width: 100%;
+    border-radius: 5px;
+  }
+}
